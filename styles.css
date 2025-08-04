@@ -1,0 +1,348 @@
+/* Basic Reset and Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    background-image: url('https://i.ibb.co/bg1p7NQg/10701006-43656.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.container {
+    background-image: url('https://i.ibb.co/Cp88yx4V/e.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    max-width: 90%;
+    width: 500px;
+    border: 3px solid #FFD700;
+    position: relative;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Gochi Hand', cursive;
+    font-size: 2.0em;
+    color: White;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+    font-size: 1.8em;
+    font-family: 'Gochi Hand', cursive;
+    margin-bottom: 25px;
+}
+
+.riddle-section {
+    margin-bottom: 30px;
+}
+
+.riddle-text {
+    font-family: 'Gochi Hand', cursive;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.riddle-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.option-label {
+    background: linear-gradient(to right, #ed5a32, #ed5a32);
+    color: #ffffff;
+    font-family: 'Gochi Hand', cursive;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 2.1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #FFD700;
+}
+
+.option-label:hover {
+    background: linear-gradient(to right, #8B0000, #B22222);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.option-label input[type="radio"] {
+    display: none;
+}
+
+.option-label input[type="radio"]:checked + span {
+    border: 3px solid #FFD700;
+    background-color: #5a0080;
+    padding: 12px 17px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.option-label span {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background: linear-gradient(to right, #ffffff, #ffffff);
+    color: #ed5a32;
+    font-family: 'Gochi Hand', cursive;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.popup-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    background-color: #FFFACD;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    max-width: 90%;
+    width: 450px;
+    transform: scale(0.8);
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    border: 5px solid #FFD700;
+    color: #5a0080;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.popup-overlay.show .popup-content {
+    transform: scale(1);
+}
+
+.popup-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    border: 3px solid #FFD700;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.popup-content p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5em;
+    color: #8B0000;
+    margin-top: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content button {
+    margin-top: 25px;
+    background: linear-gradient(to right, #8B0000, #B22222);
+    color: #FFFFFF;
+}
+
+.popup-content button:hover {
+    background: linear-gradient(to right, #B22222, #8B0000);
+}
+
+.incorrect-animation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5em;
+    z-index: 9999;
+    display: none;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes shake {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    25% { transform: translate(-55%, -50%) rotate(-5deg); }
+    50% { transform: translate(-45%, -50%) rotate(5deg); }
+    75% { transform: translate(-55%, -50%) rotate(-5deg); }
+    100% { transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.celebration-effects {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 2s ease-out;
+}
+
+.celebration-effects.active {
+    opacity: 1;
+}
+
+.flower-petal {
+    position: absolute;
+    background-color: #FFD700;
+    border-radius: 50%;
+    opacity: 0;
+    animation: fallAndFade 5s forwards ease-out;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
+}
+
+.flower-petal:nth-child(2n) { background-color: #B22222; }
+.flower-petal:nth-child(3n) { background-color: #E0BBE4; }
+.flower-petal:nth-child(4n) { background-color: #FFFFFF; }
+
+@keyframes fallAndFade {
+    0% { transform: translate(0, -100px) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    100% { transform: translate(var(--end-x), 100%); opacity: 0; }
+}
+
+.pop-element {
+    position: absolute;
+    background-color: #FFD700;
+    border-radius: 50%;
+    opacity: 0;
+    animation: popAndFade 1s forwards ease-out;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+}
+
+.pop-element:nth-child(2n) { background-color: #B22222; }
+.pop-element:nth-child(3n) { background-color: #E0BBE4; }
+
+@keyframes popAndFade {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0.5); opacity: 0; }
+}
+
+#submitAnswer {
+    font-family: 'Gochi Hand', cursive;
+    color: #ed5a32;
+}
+
+#sa, #s, #p {
+    font-family: "Libertinus Mono", monospace;
+    text-align: center;
+}
+
+#sa { font-size: 2.5em; color: #66023C; margin: 0.2em 0; }
+#s { font-size: 1.5em; color: #66023C; margin: 0.2em 0; }
+#p { font-size: 1.5em; font-style: normal; }
+
+#closePopup {
+    margin-top: 25px;
+    background: linear-gradient(to right, #8B0000, #B22222);
+    color: #FFFFFF;
+}
+
+#closePopup:hover {
+    background: linear-gradient(to right, #B22222, #8B0000);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5em; }
+    h2 { font-size: 1.4em; }
+    .riddle-text { font-size: 1.05em; }
+    .option-label { padding: 12px 15px; font-size: 1em; }
+    button { padding: 12px 25px; font-size: 1.1em; }
+    .popup-content { padding: 30px; }
+    .popup-content p { font-size: 2em; }
+    #sa { font-size: 2em; }
+    #s { font-size: 1.3em; }
+    #p { font-size: 1.3em; }
+    .incorrect-animation { font-size: 4em; }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.2em; }
+    .riddle-text { font-size: 0.95em; }
+    .option-label { padding: 10px 12px; font-size: 0.9em; }
+    button { padding: 10px 20px; font-size: 1em; }
+    .container { margin: 15px; padding: 20px; }
+    .popup-content { padding: 20px; }
+    .popup-content p { font-size: 1.6em; }
+    #sa { font-size: 1.8em; }
+    #s { font-size: 1.1em; }
+    #p { font-size: 1.1em; }
+    .incorrect-animation { font-size: 3em; }
+}
+
+@media (max-width: 375px) {
+    h1 { font-size: 1.8em; }
+    h2 { font-size: 1.1em; }
+    .riddle-text { font-size: 0.9em; }
+    .option-label { padding: 8px 10px; font-size: 0.85em; }
+    button { padding: 8px 15px; font-size: 0.9em; }
+    .container { margin: 10px; padding: 15px; }
+    .popup-content { padding: 15px; }
+    .popup-content p { font-size: 1.4em; }
+    #sa { font-size: 1.6em; }
+    #s { font-size: 1em; }
+    #p { font-size: 1em; }
+    .incorrect-animation { font-size: 3em; }
+}

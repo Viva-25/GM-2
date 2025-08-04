@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Annual Day Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@400;700&family=Libertinus+Mono&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=gagalin@400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+        <h1>Annual Day Celebration</h1>
+        <h2>Crown On, Smiles Ready – It’s Time to Celebrate!</h2>
+
+        <div class="riddle-section">
+            <p class="riddle-text">
+                I don’t wear a uniform, but I lead the show,
+From top to bottom, I run the flow.
+            </p>
+
+            <div class="riddle-options">
+                <label class="option-label">
+                    <input type="radio" name="riddle" value="echo">
+                    <span>A. Housekeeping Manager</span>
+                </label>
+                <label class="option-label">
+                    <input type="radio" name="riddle" value="shadow">
+                    <span>B. Front Office Manager</span>
+                </label>
+                <label class="option-label">
+                    <input type="radio" name="riddle" value="wind">
+                    <span>C. General Manager</span>
+                </label>
+                <label class="option-label">
+                    <input type="radio" name="riddle" value="fire">
+                    <span>D. Duty Manager</span>
+                </label>
+            </div>
+
+            <button id="submitAnswer">Reveal Your Fate</button>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="invitationPopup">
+
+
+     <div class="popup-content">
+                       <img src="https://i.ibb.co/G47HTCyf/02.jpg">
+                        <div class="celebration-effects" id="celebrationEffects"></div>
+            
+        </div>
+    </div>
+
+    <div class="incorrect-animation" id="incorrectAnimation">
+        &#128540; </div>
+
+    <audio id="celebrationAudio" src="https://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
+  
